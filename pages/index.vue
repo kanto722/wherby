@@ -1,17 +1,13 @@
 <template>
   <div>
-    <HeaderBlock />
-    <PageStart />
-    <FooterBlock />
+    content
   </div>
 </template>
 
 <script>
-import PageStart from '@/block/PageStart';
 export default {
   name: 'IndexPage',
   components: {
-    PageStart,
   }
 }
 </script>

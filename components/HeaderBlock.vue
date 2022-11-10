@@ -9,3 +9,7 @@ export default {
   name: 'NuxtHeader',
 }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
