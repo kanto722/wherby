@@ -1,7 +1,7 @@
 <template>
   <div>
     <HeaderBlock />
-    <div class="container">
+    <div>
         <Nuxt />
     </div>
     <FooterBlock />

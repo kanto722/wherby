@@ -12,6 +12,9 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link : [{ rel: 'preconnect', href :'https://fonts.googleapis.com' }],
+    link : [{ rel: 'preconnect', href: 'https://fonts.gstatic.com' }],
+    link : [{ href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap', rel: 'stylesheet' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -34,8 +37,13 @@ export default {
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     '@nuxtjs/style-resources',
+    '@nuxtjs/axios',
   ],
-
+  
+  axios: {
+    // proxy: true
+  },
+  
   styleResources: {
     scss: [
       '~/scss/variables/color.scss',
@@ -48,4 +56,7 @@ export default {
   build: {
 
   },
+  env: {
+    BASE_API_URL: process.env.VUE_APP_API_URL
+  }
 }
