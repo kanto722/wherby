@@ -41,6 +41,7 @@ export default {
   flex-direction: column;
   align-items: center;
   margin-top: 34px;
+  margin-bottom: 100px;
   &-row {
     display: flex;
   }
@@ -86,6 +87,10 @@ export default {
         font-size: 14px;
         line-height: 24px;
         color: #393939;
+        margin-right: 19px;
+      }
+      &__item:last-child {
+        margin-right: 0;
       }
     }
   }
