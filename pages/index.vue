@@ -62,11 +62,10 @@ export default {
     try {
       const res = await ItemApi.getItems()
 
-      console.log(res)
-
       this.items = res
     } catch (error) {
       // В идеале показывать пользователю.
+      // eslint-disable-next-line no-console
       console.error(error)
     }
   },

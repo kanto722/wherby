@@ -28,7 +28,7 @@
 <script>
 import FillterType from '~/components/FillterType.vue'
 export default {
-  name: 'typeProduct',
+  name: 'TypeProduct',
   components: {
     FillterType,
   },
