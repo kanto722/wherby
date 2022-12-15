@@ -36,6 +36,9 @@ export const mutations = {
       item.id === id ? { ...item, count: item.count - 1 } : item
     )
   },
-
-  
+  changeChecked(state, id, checked) {
+    state.items = state.items.map((item) =>
+      item.id === id ? { ...item, checked } : item
+    )
+  },
 }
