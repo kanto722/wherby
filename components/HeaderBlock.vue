@@ -380,9 +380,7 @@ export default {
   // .tabs-body__content
   &__content {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
-    grid-auto-flow: column;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     list-style: none;
     padding: 0;
     gap: 12px;
