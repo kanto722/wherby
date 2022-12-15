@@ -87,7 +87,7 @@ export default {
     padding: 33px 0px 64px 0px;
     &-content {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-between;      
     }
     &-info {
       display: flex;
@@ -151,6 +151,36 @@ export default {
       .footer-item:last-child {
         margin-right: 0;
       }
+    }
+  }
+  @media screen and (max-width:992px) {
+    .footer-content {
+      flex-wrap: wrap;
+      justify-content: center;
+      
+    }
+    .footer-info {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      margin-top: 30px;
+      order: 1;
+      margin-right: 0px;
+    }
+  }
+  @media screen and (max-width:480px) {
+    .footer-navigation {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .footer-item {
+      margin-right: 0px;
+    }
+    .footer-info {
+      flex-direction: column;
+      justify-content: center;
     }
   }
 </style>

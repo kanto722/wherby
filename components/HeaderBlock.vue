@@ -102,38 +102,23 @@
           <div class="tabs__body tabs-body">
             <h3 class="tabs-body__title">Одежда</h3>
             <ul class="tabs-body__content">
-              <li class="tabs-body__item">Блузы и рубашки</li>
-              <li class="tabs-body__item">Брюки, бриджи, капри</li>
-              <li class="tabs-body__item">Верхняя одежда</li>
-              <li class="tabs-body__item">Джинсы и джеггинсы</li>
-              <li class="tabs-body__item">Домашняя одежда</li>
-              <!--  -->
-              <li class="tabs-body__item">Блузы и рубашки</li>
-              <li class="tabs-body__item">Брюки, бриджи, капри</li>
-              <li class="tabs-body__item">Верхняя одежда</li>
-              <li class="tabs-body__item">Джинсы и джеггинсы</li>
-              <li class="tabs-body__item">Домашняя одежда</li>
-              <!--  -->
-              <li class="tabs-body__item">Блузы и рубашки</li>
-              <li class="tabs-body__item">Брюки, бриджи, капри</li>
-              <li class="tabs-body__item">Верхняя одежда</li>
-              <li class="tabs-body__item">Джинсы и джеггинсы</li>
-              <li class="tabs-body__item">Домашняя одежда</li>
-              <!--  -->
-              <li class="tabs-body__item">Блузы и рубашки</li>
-              <li class="tabs-body__item">Брюки, бриджи, капри</li>
-              <li class="tabs-body__item">Верхняя одежда</li>
-              <li class="tabs-body__item">Джинсы и джеггинсы</li>
-              <li class="tabs-body__item">Домашняя одежда</li>
-              <!--  -->
-              <li class="tabs-body__item">Блузы и рубашки</li>
+              <NuxtLink to="/productWomen">
+                <li @click="toggleOpenCatalog" class="tabs-body__item">Блузы и рубашки</li>
+              </NuxtLink>
+              <NuxtLink to="/productWomenBru">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Брюки, бриджи, капри</li>
+              </NuxtLink>
+              <NuxtLink to="/productWomenVerx">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Верхняя одежда</li>
+              </NuxtLink>
             </ul>
           </div>
           <div class="tabs__body tabs-body">
             <h3 class="tabs-body__title">Обувь</h3>
             <ul class="tabs-body__content">
-              <li class="tabs-body__item">Балетки</li>
-              <li class="tabs-body__item">Босоножки</li>
+              <NuxtLink to="/productWomenOby">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Обувь</li>
+              </NuxtLink>
             </ul>
           </div>
         </section>
@@ -142,14 +127,28 @@
           role="tabpanel"
           :class="{ tabs__section_show: isActive('mans') }"
         >
-          <div class="tabs__body">Mans</div>
-        </section>
-        <section
-          class="tabs__section tabs__section_fade"
-          role="tabpanel"
-          :class="{ tabs__section_show: isActive('children') }"
-        >
-          <div class="tabs__body">children</div>
+          <div class="tabs__body">
+            <h3 class="tabs-body__title">Одежда</h3>
+            <ul class="tabs-body__content">
+              <NuxtLink to="/productMan">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Толстовки, свитшоты и худи</li>
+              </NuxtLink>
+              <NuxtLink to="/productManBru">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Брюки, бриджи, капри</li>
+              </NuxtLink>
+              <NuxtLink to="/productManOdex">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Верхняя одежда</li>
+              </NuxtLink>
+            </ul>
+          </div>
+          <div class="tabs__body tabs-body">
+            <h3 class="tabs-body__title">Обувь</h3>
+            <ul class="tabs-body__content">
+              <NuxtLink to="/productManObyv">
+              <li @click="toggleOpenCatalog" class="tabs-body__item">Обувь</li>
+              </NuxtLink>
+            </ul>
+          </div>
         </section>
       </div>
     </div>
@@ -165,7 +164,7 @@ export default {
   components: {
     ButtonStandard,
   },
-  data: function () {
+  data() {
     return {
       activeItem: 'womens',
       openCatalog: false,
@@ -396,6 +395,10 @@ export default {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
+    cursor: pointer;
+        outline: none;
+    text-decoration: none;
+    color: #000;
   }
 }
 
