@@ -4,6 +4,7 @@
       <div class="head-top">
         <div>
           <!-- <img :src="require(`${items}`)" alt="banner" /> -->
+          <img src="@/assets/images/banner/баннер.png" alt="banner" />
         </div>
       </div>
       <div class="head-right">
@@ -14,7 +15,7 @@
         <img src="@/assets/images/banner/head-bottom-banner.png" alt="banner" />
       </div>
       <div class="content-catalog">
-        <h2>Только до <span>15.10</span></h2>
+        <h2>Только до <span>15.01</span></h2>
         <div class="content-catalog-container">
           <div
             v-for="item in items?.actual"
