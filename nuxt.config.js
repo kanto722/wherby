@@ -12,9 +12,14 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
-    link : [{ rel: 'preconnect', href :'https://fonts.googleapis.com' }],
-    link : [{ rel: 'preconnect', href: 'https://fonts.gstatic.com' }],
-    link : [{ href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap', rel: 'stylesheet' }],
+    link: [{ rel: 'preconnect', href: 'https://fonts.googleapis.com' }],
+    link: [{ rel: 'preconnect', href: 'https://fonts.gstatic.com' }],
+    link: [
+      {
+        href: 'https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&display=swap',
+        rel: 'stylesheet',
+      },
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
@@ -32,18 +37,16 @@ export default {
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/stylelint
     '@nuxtjs/stylelint-module',
+    '@nuxtjs/svg-sprite',
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [
-    '@nuxtjs/style-resources',
-    '@nuxtjs/axios',
-  ],
-  
+  modules: ['@nuxtjs/style-resources', '@nuxtjs/axios'],
+
   axios: {
     // proxy: true
   },
-  
+
   styleResources: {
     scss: [
       '~/scss/variables/color.scss',
@@ -53,10 +56,8 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {
-
-  },
+  build: {},
   env: {
-    BASE_API_URL: process.env.VUE_APP_API_URL
-  }
+    BASE_API_URL: process.env.VUE_APP_API_URL,
+  },
 }

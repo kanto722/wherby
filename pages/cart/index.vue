@@ -26,9 +26,9 @@
           <ul class="cart__products cart-container">
             <li class="cart__product cart-product">
               <div class="cart-product__select">
-                <label for="select-product" class="checkbox">
+                <label for="select-product-1" class="checkbox">
                   <input
-                    id="select-product"
+                    id="select-product-1"
                     type="checkbox"
                     class="checkbox__input"
                   />
@@ -58,10 +58,119 @@
                     ><span class="cart-product__price-discount">899 ₽</span>
                   </div>
                 </div>
-                <div class="cart-product__count cart-container cart-container_count">
-                  <button>-</button>
+                <div
+                  class="
+                    cart-product__count
+                    cart-container cart-container_count
+                  "
+                >
+                  <button>
+                    <svg-icon name="cart/minus" />
+                  </button>
                   <span>1</span>
-                  <button>+</button>
+                  <button>
+                    <svg-icon name="cart/plus" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="cart__product cart-product">
+              <div class="cart-product__select">
+                <label for="select-product-2" class="checkbox">
+                  <input
+                    id="select-product-2"
+                    type="checkbox"
+                    class="checkbox__input"
+                  />
+                </label>
+              </div>
+              <div class="cart-product__image">
+                <img
+                  src="@/assets/images/sneakers.png"
+                  alt="image - Кроссовки SpikeStreet"
+                />
+              </div>
+              <div class="cart-product__body">
+                <div class="cart-product__header">
+                  <div class="cart-product__info">
+                    <h3 class="cart-product__title">
+                      Кроссовки <span>SpikeStreet</span>
+                    </h3>
+                    <p class="cart-product__description">
+                      цвет белый, размер RU 42 / UK 9.0...
+                    </p>
+                    <NuxtLink to="/product" class="cart-product__brand">
+                      Arduino
+                    </NuxtLink>
+                  </div>
+                  <div class="cart-product__price">
+                    <span class="cart-product__price-standard">599 ₽</span
+                    ><span class="cart-product__price-discount">899 ₽</span>
+                  </div>
+                </div>
+                <div
+                  class="
+                    cart-product__count
+                    cart-container cart-container_count
+                  "
+                >
+                  <button>
+                    <svg-icon name="cart/minus" />
+                  </button>
+                  <span>1</span>
+                  <button>
+                    <svg-icon name="cart/plus" />
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="cart__product cart-product">
+              <div class="cart-product__select">
+                <label for="select-product-3" class="checkbox">
+                  <input
+                    id="select-product-3"
+                    type="checkbox"
+                    class="checkbox__input"
+                  />
+                </label>
+              </div>
+              <div class="cart-product__image">
+                <img
+                  src="@/assets/images/sneakers.png"
+                  alt="image - Кроссовки SpikeStreet"
+                />
+              </div>
+              <div class="cart-product__body">
+                <div class="cart-product__header">
+                  <div class="cart-product__info">
+                    <h3 class="cart-product__title">
+                      Кроссовки <span>SpikeStreet</span>
+                    </h3>
+                    <p class="cart-product__description">
+                      цвет белый, размер RU 42 / UK 9.0...
+                    </p>
+                    <NuxtLink to="/product" class="cart-product__brand">
+                      Arduino
+                    </NuxtLink>
+                  </div>
+                  <div class="cart-product__price">
+                    <span class="cart-product__price-standard">599 ₽</span
+                    ><span class="cart-product__price-discount">899 ₽</span>
+                  </div>
+                </div>
+                <div
+                  class="
+                    cart-product__count
+                    cart-container cart-container_count
+                  "
+                >
+                  <button>
+                    <svg-icon name="cart/minus" />
+                  </button>
+                  <span>1</span>
+                  <button>
+                    <svg-icon name="cart/plus" />
+                  </button>
                 </div>
               </div>
             </li>
@@ -70,10 +179,10 @@
         <div class="cart__sidebar">
           <div class="cart__info cart-info cart-container">
             <div class="cart-info__title">
-              <span class="cart-info__item-label">Итого:</span>
-              <span class="cart-info__item-value">1797 ₽</span>
+              <span class="cart-info__title-label">Итого:</span>
+              <span class="cart-info__title-value">1797 ₽</span>
             </div>
-            <ul class="cart-info__list">
+            <ul class="cart-info__list cart-info__list_with-lines">
               <li class="cart-info__item">
                 <div class="cart-info__item-label">Ваша корзина:</div>
                 <div class="cart-info__item-value">3 товара, 850 гр</div>
@@ -87,10 +196,26 @@
                 <div class="cart-info__item-value">Бесплатно</div>
               </li>
             </ul>
-            <div class="cart-info__title">
+            <div class="cart-info__title cart-info__title_delivery">
               <span class="cart-info__title-label">Доставка:</span>
               <span class="cart-info__title-value">Пункт выдачи</span>
             </div>
+            <ul class="cart-info__list">
+              <li class="cart-info__item">
+                <div class="cart-info__item-label">Время работы:</div>
+                <div class="cart-info__item-value">Пн-Вс 9:00-19:00</div>
+              </li>
+              <li class="cart-info__item">
+                <div class="cart-info__item-label">Дата:</div>
+                <div class="cart-info__item-value">20-23 сентября</div>
+              </li>
+              <li class="cart-info__item">
+                <div class="cart-info__item-label">Адрес:</div>
+                <div class="cart-info__item-value">
+                  Москва (Россия) Пушкина 5к3
+                </div>
+              </li>
+            </ul>
           </div>
           <button class="cart__checkout">Оформить заказ</button>
         </div>
@@ -116,22 +241,26 @@ export default {
   &_header {
     padding: 15px 25px;
   }
+
   &_count {
-    padding: 8px 10px;
+    background: #f7f8fc;
+    padding: 5px 10px;
   }
 }
 
 .cart {
   background: #f7f8fc;
   padding: 50px 0;
+
   // .cart_title
   &__title {
     display: flex;
-    align-items: flex-end;
+    align-items: baseline;
     color: #000000;
     font-family: 'Manrope';
     font-style: normal;
     gap: 10px;
+
     &-text {
       font-weight: bold;
       font-size: 24px;
@@ -235,8 +364,29 @@ export default {
 
   // .cart__checkout
   &__checkout {
+    margin-top: 15px;
+    border: none;
+
+    width: 100%;
+    padding: 30px 10px;
+    background: #d9ed4a;
+    border-radius: 15px;
+
+    font-family: 'Manrope';
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+
+    color: #393939;
+    cursor: pointer;
+    transition: background 0.25s ease-in-out;
+
+    &:hover {
+      background: #e6fb50;
+    }
   }
 }
+
 .checkbox {
   // .checkbox__input
   &__input {
@@ -246,9 +396,11 @@ export default {
   &__text {
   }
 }
+
 .cart-product {
   display: flex;
   gap: 30px;
+
   // .cart-product__select
   &__select {
   }
@@ -261,6 +413,10 @@ export default {
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+
+    background: #f7f8fc;
+    border-radius: 10px;
+    overflow: hidden;
   }
 
   // .cart-product__body
@@ -343,6 +499,7 @@ export default {
     color: #393939;
     position: relative;
     padding-left: 10%;
+
     &::after {
       content: '';
       position: absolute;
@@ -361,44 +518,111 @@ export default {
     align-self: flex-end;
     display: flex;
     justify-content: flex-end;
-    align-self: center;
+    align-items: center;
     margin-top: auto;
-    margin-left: auto;
+    gap: 20px;
 
     button {
       background: none;
       border: none;
       cursor: pointer;
+      width: 14px;
+      height: 14px;
+      padding: 0;
+
+      svg {
+        height: 100%;
+        width: 100%;
+
+        use {
+          path {
+            stroke: red;
+          }
+        }
+      }
     }
   }
 }
+
 .cart-info {
   // .cart-info__title
   &__title {
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 
-  // .cart-info__item-label
-  &__item-label {
-  }
+    font-family: 'Manrope';
+    font-weight: 800;
+    font-size: 20px;
+    line-height: 27px;
+    color: #000000;
+    margin-bottom: 20px;
 
-  // .cart-info__item-value
-  &__item-value {
+    // .cart-info__title-label
+    &-label {
+    }
+
+    // .cart-info__title-value
+    &-value {
+      text-align: right;
+    }
+
+    &_delivery {
+      margin-bottom: 10px;
+
+      .cart-info__title-value {
+        font-family: 'Manrope';
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 22px;
+        text-align: right;
+        text-decoration-line: underline;
+
+        color: #ff99ff;
+      }
+    }
   }
 
   // .cart-info__list
   &__list {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &_with-lines {
+      padding: 20px 0;
+      border-top: 1px solid #d9dffc;
+      border-bottom: 1px solid #d9dffc;
+      margin: 0 0 25px;
+    }
   }
 
   // .cart-info__item
   &__item {
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
 
-  // .cart-info__title-label
-  &__title-label {
-  }
+    font-family: 'Manrope';
+    font-size: 16px;
+    line-height: 22px;
 
-  // .cart-info__title-value
-  &__title-value {
+    // .cart-info__item-label
+    &-label {
+      color: #4361ee;
+      font-weight: 600;
+    }
+
+    // .cart-info__item-value
+    &-value {
+      text-align: right;
+      font-weight: 400;
+      color: #393939;
+      max-width: 150px;
+    }
   }
 }
 </style>
