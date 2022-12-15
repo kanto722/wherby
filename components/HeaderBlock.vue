@@ -47,10 +47,10 @@
               <img src="@/assets/images/svg/man.svg" alt="man" />
               <span>Войти</span>
             </div>
-            <div class="header-nav-item">
+            <NuxtLink to="/cart" class="header-nav-item">
               <img src="@/assets/images/svg/buy.svg" alt="buy" />
               <span>Корзина</span>
-            </div>
+            </NuxtLink>
           </div>
         </div>
       </div>

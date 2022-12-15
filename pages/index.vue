@@ -2,7 +2,7 @@
   <div class="content">
     <div class="container">
       <div class="head-top">
-        <div >
+        <div>
           <!-- <img :src="require(`${items}`)" alt="banner" /> -->
         </div>
       </div>
@@ -46,6 +46,8 @@ import ElementCard from '@/components/ElementCard.vue'
 
 import { ItemApi } from '@/services/api'
 
+import '@/scss/globals.scss'
+
 export default {
   name: 'IndexPage',
   components: {
@@ -72,8 +74,7 @@ export default {
   methods: {},
 }
 </script>
-<style lang="scss">
-@import '@/scss/globals.scss';
+<style lang="scss" scoped>
 .content {
   display: flex;
   flex-direction: column;
