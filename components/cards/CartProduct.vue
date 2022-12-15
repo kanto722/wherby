@@ -89,6 +89,11 @@ export default {
   display: flex;
   gap: 30px;
 
+  @include _768 {
+    gap: 15px;
+    flex-direction: column;
+  }
+
   // .cart-product__select
   &__select {
   }
@@ -105,6 +110,26 @@ export default {
     background: #f7f8fc;
     border-radius: 10px;
     overflow: hidden;
+
+    @include _768 {
+      margin: 0 auto;
+      width: 320px;
+      height: 320px;
+    }
+    @include _480 {
+      width: 240px;
+      height: 240px;
+    }
+    @include _375 {
+      width: 100%;
+      padding-top: 100%;
+      position: relative;
+      img {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
   }
 
   // .cart-product__body
@@ -119,6 +144,10 @@ export default {
   &__header {
     display: flex;
     justify-content: space-between;
+    @include _768 {
+      gap: 15px;
+      flex-direction: column;
+    }
   }
 
   // .cart-product__info
@@ -186,7 +215,7 @@ export default {
     line-height: 19px;
     color: #393939;
     position: relative;
-    padding-left: 10%;
+    padding-left: 5px;
 
     &::after {
       content: '';

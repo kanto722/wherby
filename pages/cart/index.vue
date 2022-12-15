@@ -3,7 +3,7 @@
     <div class="container">
       <div class="cart__title">
         <h2 class="cart__title-text">Корзина</h2>
-        <p class="cart__title-count">{{ items.length }} товара</p>
+        <p class="cart__title-count">{{ items.length }} товар</p>
       </div>
       <div class="cart__content">
         <div class="cart__body">
@@ -48,11 +48,14 @@
             <ul class="cart-info__list cart-info__list_with-lines">
               <li class="cart-info__item">
                 <div class="cart-info__item-label">Ваша корзина:</div>
-                <div class="cart-info__item-value">3 товара, 850 гр</div>
+                <div class="cart-info__item-value">
+                  {{ items.length }} товар,
+                  <!-- 850 гр -->
+                </div>
               </li>
               <li class="cart-info__item">
                 <div class="cart-info__item-label">Скидка:</div>
-                <div class="cart-info__item-value">-900 ₽</div>
+                <div class="cart-info__item-value">-{{ totalDiscount }} ₽</div>
               </li>
               <li class="cart-info__item">
                 <div class="cart-info__item-label">Доставка:</div>
@@ -103,6 +106,15 @@ export default {
         0
       )
     },
+    totalDiscount() {
+      return this.$store.state.cart.items.reduce(
+        (acc, item) =>
+          (acc +=
+            (item.discountPrice ? item.price - item.discountPrice : 0) *
+            item.count),
+        0
+      )
+    },
   },
   mounted() {
     this.$store.commit('cart/add', {
@@ -111,8 +123,8 @@ export default {
       title: 'SpikeStreet',
       description: 'цвет белый, размер RU 42 / UK 9.0...',
       brand: 'Arduino',
-      price: 599,
-      discountPrice: null,
+      price: 620,
+      discountPrice: 599,
       count: 1,
       id: 123,
     })
@@ -182,6 +194,14 @@ export default {
     display: flex;
     align-items: flex-start;
     gap: 40px;
+
+    @include _1200 {
+      gap: 20px;
+    }
+    @include _992 {
+      flex-direction: column;
+      align-items: stretch;
+    }
   }
 
   // .cart__body
@@ -196,6 +216,7 @@ export default {
   &__header {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
     gap: 20px;
   }
 
@@ -256,6 +277,10 @@ export default {
   &__sidebar {
     flex-basis: 360px;
     flex-shrink: 0;
+
+    @include _1200 {
+      flex-shrink: 1;
+    }
   }
 
   // .cart__info
