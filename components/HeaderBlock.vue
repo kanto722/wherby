@@ -412,4 +412,47 @@ export default {
   height: 100vh;
   z-index: -2;
 }
+@media screen and (max-width:992px) {
+.header-search {
+  display: none;
+}
+.header-bottom .header-logo {
+  width: 100%;
+}
+@media screen and (max-width:678px) {
+.header-top__info {
+  display: none;
+}
+.header-bottom .header-nav {
+  flex-direction: column;
+  grid-gap: 0px;
+  gap: 10px;
+}
+.button {
+  max-height: 44px;
+}
+.header-bottom .header-nav-item:last-child {
+  margin-right: 0;
+}
+}
+@media screen and (max-width:480px)  {
+.header-bottom .header-nav {
+  display: none;
+}
+.header-bottom {
+  flex-direction: column;
+  align-items: center;
+}
+.header-bottom .button-catalog {
+  max-width: 122px;
+  margin-right: 0;
+}
+.header-bottom .header-logo {
+  margin-right: 0;
+}
+.container {
+  align-items: center;
+}
+}
+}
 </style>
