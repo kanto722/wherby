@@ -435,7 +435,8 @@ export default {
 }
 @media screen and (max-width:480px)  {
 .header-bottom .header-nav {
-  display: none;
+    flex-direction: row;
+    margin-top: 20px;
 }
 .header-bottom {
   flex-direction: column;

@@ -379,4 +379,20 @@ export default {
     }
   }
 }
+@media screen and (max-width:992px) {
+.content-catalog-container {
+  gap: 20px !important;
+  justify-content: center;
+}
+.content .head-right {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.content .head-right img {
+  width: 100%;
+  max-height: 187px;
+  max-width: 100%;
+}
+}
 </style>
